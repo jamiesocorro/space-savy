@@ -1,0 +1,67 @@
+
+.mission-container {
+    padding: 3vh;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+        display: flex;
+    }
+}
+
+.mission-img {
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+}
+
+.mission-detail-title {
+    display: flex;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.mission-detail-time {
+    display: flex;
+    text-align: left;
+    margin: 10px;
+    color: rgba(0,0,0,0.6);
+}
+
+.mission-buttons {
+    justify-content: space-between;
+    margin: 10px;
+
+    @media (min-width: 1024px) {
+        display: flex;
+    }
+}
+
+.mission-buttons div {
+    margin-left: 10px;
+}
+
+.mission-buttons div button {
+    background-color: #ffffff;
+    color: rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 3px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.mission-number {
+    margin-left: auto;
+}
+
+.flight-number {
+    font-size: 1.5rem;
+}
+
+.mission-status {
+    display: flex;
+}
+
+.failed {
+    color: red;
+}

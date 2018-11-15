@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:200,300,400,500,700');
+
+html {
+  font-size: 10px;
+
+  @media (min-width: 840px) {
+        font-size: 14px;
+  }
+
+  @media (min-width: 1280px) {
+        font-size: 16px;
+  }
+
+  @media (min-width: 1920px) {
+        font-size: 18px;
+  }
+
+  @media (min-width: 2560px) {
+        font-size: 24px;
+  }
+
+  @media (min-width: 3840px) {
+        font-size: 30px;
+  }
+}
+
+.App {
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.App-title {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.warning {
+  color: darken(red, 20%);
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eaedf1;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.dd-logo {
+  height: 150px;
+}
+
+.mission-item-list-container {
+  margin: 2rem;
+  margin-bottom: 1rem;  
+  background-color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-btn {
+  cursor: pointer;
+}

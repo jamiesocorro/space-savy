@@ -1,0 +1,45 @@
+.search-filter-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5vh;
+    align-items: center;
+    background-color: #f9fafa;
+
+  @media (min-width: 1024px) {
+     display: flex;
+  }
+
+ 
+}
+
+.control-main {
+    width: calc(25% - 10px);
+    padding: 10px;
+}
+
+.control-minor {
+    width: calc(16% - 30px);
+    padding: 10px;
+}
+
+.search-filter-container, label {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+.search-btn {
+    background-color: #1fbba6;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+input, select {
+    padding: 10px 0px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.15);
+}
