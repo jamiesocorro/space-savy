@@ -18,7 +18,11 @@ class SearchFilter extends Component {
         this.minYearRef = React.createRef();
 
         this.searchMissions = this.searchMissions.bind(this);
-    
+        this.distinctYear();
+    }
+
+    distinctYear() {
+
     }
     
     searchMissions(e) {
@@ -50,9 +54,11 @@ class SearchFilter extends Component {
                     <div>
                         <label htmlFor="">Launch Pad</label>
                     </div>
-                    <div>
-                      
-                         <select ref={ this.launchPadRef } >{this.props.launchPad.map((pad) => <option value={pad.full_name}>{pad.full_name}</option>)}</select>
+                    <div>                      
+                        <select ref={this.launchPadRef} >
+                            <option value="" selected>Any</option>
+                            {this.props.launchPad.map((pad) => <option value={pad.full_name}>{pad.full_name}</option>)}
+                        </select>
                     </div>
                 </div>
                 <div className="control-minor">
@@ -60,10 +66,10 @@ class SearchFilter extends Component {
                         <label htmlFor="">Min Year</label>
                     </div>
                     <div>
-                        <select ref={ this.maxYearRef }>
+                        <select ref={ this.minYearRef }>
                             <option value="" disabled selected>Any</option>
-                            <option value="Max">Any</option>
-                            <option value="Max1">Max 1</option>
+                            <option value="" selected>Any</option>
+                            {this.props.yearList.map((year) => <option value={year}>{year}</option>)}
                         </select>
                     </div>
                 </div>
@@ -72,10 +78,10 @@ class SearchFilter extends Component {
                         <label htmlFor="">Max Year</label>
                     </div>
                     <div>
-                        <select ref={ this.minYearRef }>
+                        <select ref={ this.maxYearRef }>
                             <option value="" disabled selected>Any</option>
-                            <option value="Min">Any</option>
-                            <option value="Min1">Min1</option>
+                            <option value="" selected>Any</option>
+                            {this.props.yearList.map((year) => <option value={year}>{year}</option>)}
                         </select>
                     </div>
                 </div>

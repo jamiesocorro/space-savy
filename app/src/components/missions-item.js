@@ -7,21 +7,7 @@ class MissionsItem extends Component {
     constructor(props) {
         super(props);
     }
-
-    getFullName() {
-        let fullName = '';
-
-        if (this.props.launchPad && this.props.launchPad.length > 0) {
-            for(const launchPad of this.props.launchPad) {
-                 if (this.props.launch.launch_site.site_id === launchPad.id) {
-                    fullName = launchPad.full_name;
-                }
-            }            
-        }
-
-        return fullName;
-    }
-
+    
     redirectTo(url) {
         window.location.href = url;
     }
@@ -49,7 +35,7 @@ class MissionsItem extends Component {
 
                     </div>
                     <div className="mission-detail-time">
-                        <span>Lauched <b>{moment(this.props.launch.launch_date_local).format("Do MMM YY")}</b> at <b>{moment(this.props.launch.launch_date_local).format("h:mm a")}</b> from <b> {this.getFullName()}</b></span>
+                        <span>Lauched <b>{moment(this.props.launch.launch_date_local).format("Do MMM YY")}</b> at <b>{moment(this.props.launch.launch_date_local).format("h:mm a")}</b> from <b> {this.props.launch.fullName}</b></span>
                     </div>
                     <div className="mission-buttons">
                         {
