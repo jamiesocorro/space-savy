@@ -13,13 +13,19 @@
 }
 
 .control-main {
-    width: calc(25% - 10px);
     padding: 10px;
+
+      @media (min-width: 1024px) {
+        width: calc(25% - 10px);
+      }
 }
 
 .control-minor {
-    width: calc(16% - 30px);
     padding: 10px;
+
+     @media (min-width: 1024px) {
+        width: calc(16% - 30px);
+      }
 }
 
 .search-filter-container, label {
