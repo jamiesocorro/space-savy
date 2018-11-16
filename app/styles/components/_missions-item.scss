@@ -12,6 +12,11 @@
     height: 100px;
     width: 100px;
     background-repeat: no-repeat;
+    margin: auto;
+
+     @media (min-width: 1024px) {
+        margin: unset;
+    }
 }
 
 .mission-detail-title {
@@ -37,16 +42,13 @@
     }
 }
 
-.mission-buttons div {
-    margin-left: 10px;
-}
-
 .mission-buttons div button {
     background-color: #ffffff;
     color: rgba(0,0,0,0.5);
     border: 1px solid rgba(0,0,0,0.15);
     border-radius: 3px;
     padding: 10px 15px;
+    margin: 5px;
     cursor: pointer;
 }
 
