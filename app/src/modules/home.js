@@ -79,22 +79,27 @@ class Home extends Component {
             });
         }
 
-        if (searchFilters.maxYear && searchFilters.maxYear !== '') {
+         if (searchFilters.maxYear && searchFilters.maxYear !== '' && searchFilters.minYear && searchFilters.minYear !== '') {
+            for(const launch of this.props.launches) {
+                if(launch.fullYear <= searchFilters.minYear && launch.fullYear <= searchFilters.maxYear) {
+                    filteredMissions.push(launch);
+                }
+            }
+           
+        } else if (searchFilters.maxYear && searchFilters.maxYear !== '') {
             for(const launch of this.props.launches) {
                 if(launch.fullYear <= searchFilters.maxYear) {
                     filteredMissions.push(launch);
                 }
             }
-            return filteredMissions;
-        }
-
-        if (searchFilters.minYear && searchFilters.minYear !== '') {
+          
+        } else if (searchFilters.minYear && searchFilters.minYear !== '') {
             for(const launch of this.props.launches) {
                 if(launch.fullYear <= searchFilters.minYear) {
                     filteredMissions.push(launch);
                 }
             }
-            return filteredMissions;
+           
         }
 
         if (searchFilters.criteria !== '' || searchFilters.launchPad !== '' || searchFilters.maxYear !== '' || searchFilters.minYear !== '') {
